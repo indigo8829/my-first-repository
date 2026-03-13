@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        /*Reglas CSS para la caja*/
+        body{
+            margin: 0px;
+        }
+        .my-box {
+            border: 3px solid rgb(255, 47, 0) ;
+            /*border-top: 1px dashed orange;
+            border-bottom: 1px dotted rgb(38, 0, 255);
+            border-left: 1px dashed orange;
+            border-right: 1px dotted rgb(0, 38, 255);*/
+            width: 200px;
+            padding: 10px;
+            /*padding:10px 40px; (arriba+abajo) (lado+lado)*/
+            margin: 20px; 
+            background-color: #eef064;
+            color:#000000;
+           
+        }
+
+        .box-vacio {
+            border: 1px dotted #ffff;
+            width: 100 px;
+            margin: 20 px;
+            background-color: #dbfbdd;
+            color: #000000;
+        }    
+
+        span {
+            border: 1px solid blue;
+            width: 500px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>BLOQUES DE CAJAS</h1>
+    <div class="my-box">
+        <h1>MI CAJA 1</h1>
+        <div class="box-vacio">
+            <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
+        </div>
+    </div>
+
+    <div class="my-box">
+        <h1>MI CAJA 2</h1>
+        <div class="box-vacio">
+            <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
+        </div>
+    </div>
+    <span>Mi caja span</span>
+    <span>Esto es una caja tipo span, elemento en linea</span>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de posicionamiento</title>
+    <style>
+        div {
+            border: 1px solid black;
+            padding: 5px 15px;
+            background-color: pink;
+            margin: 5px 0px;
+        }
+        
+        .posicion-relativa {
+            position: relative;
+            top: 0px;
+            left: 50px; /*right*/
+            background-color: palevioletred;
+        }
+
+        .posicion-absoluta {
+            position: absolute;
+            top: 50px; 
+            left: 50px; /*right*/
+            background-color: burlywood;
+        }
+        
+        .posicion-fixed {
+            position: fixed;
+            background-color: azure;
+        }
+
+        .posicion-sticky {
+            position: sticky;
+            background-color: aquamarine;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="posicion-relativa">Posición Relativa</div>
+
+    <div class="posicion-absoluta">Posición Absoulta</div>
+    
+    <div class="posicion-fixed">Posición fixed</div>
+
+    <div class="posicion-sticky">Posicion sticky</div>
+
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatem velit recusandae, minima pariatur error beatae deleniti nisi consectetur! Consequatur dignissimos minima totam voluptatibus facere debitis hic quibusdam illum ex.
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+* {    /*Esto es un selector universal */
+    background-color: rgb(224, 223, 223);
+}
+
+body > p{   /*selector hijo directo de body*/
+    color:crimson;
+    font-size: 20px;
+}
+
+p {
+    color: blue;
+    font-family:'Verdana';
+}
+
+#principal{
+    color:gold;
+    background-color: black;
+    margin-bottom: 100px;
+}
+
+p.unico{     /*selector etiqueta + clase*/
+    color: brown;
+    background-color:gold;
+    font-family: 'Franklin Gothic Medium';
+
+}
+
+div > p {   
+    color:orange;
+
+}
+
+div h1 { /*selector descendente aplica a los h1 dentro de div*/
+    color:darkturquoise ;
+    font-size: 30px;
+}
