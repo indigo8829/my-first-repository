@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Flexbox</title>
+    <style>
+        .navbar {
+            display:flex;
+            border: 1px solid gray; 
+            background-color: rgb(149, 149, 149);
+            max-width: 100%;
+            flex-direction: row; 
+            justify-content:flex-start;
+            flex-basis: 70px 50px;
+                       
+        }
+        .logo {
+            border: 1px solid yellow;
+            background-color: rgb(127, 104, 150);
+            
+        }
+        .menu {
+            border: 1px solid orange;
+            display:flex;
+            list-style-type: none;
+            justify-content: space-around;
+             
+        }
+        .login {
+            background-color: rgb(133, 181, 218);
+            
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">70x50</div>
+        <ul class="menu">
+            <li>Inicio</a></li>
+            <li>Cursos</a></li>
+            <li>Contacto</a></li>
+        </ul>
+        <button class="login">Login</button>
+    </nav>
+</body>
+</html>

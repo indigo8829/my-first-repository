@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro en red social</title>
+</head>
+<body>
+    <h1>Registro en Red Social</h1>
+    <form action="index.html" method="post">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="nombre">Nombre Completo:</label>
+            <br>
+            <input type="text" name="nombrecompleto" id="nombrecompleto" >
+            <br>
+            <label for="nombreusuario">Nombre de usuario:</label>
+            <br>
+            <input type="text" name="nombreusuario" id="nombreusuario">
+            <br>
+            <label for="correo">Correo electrónico:</label>
+            <br>
+            <input type="email" name="correo" id="correo">
+            <br>
+            <label for="fechadenacimiento">Fecha de nacimiento:</label>
+            <br>
+            <input type="date" name="fechadenacimiento" id="fechadenacimiento">
+            <br>
+            <label for="color">Color favorito:</label>
+            <br>
+            <input type="color" name="color" id="color">
+        </fieldset>
+        <fieldset>
+            <legend>Seguridad</legend>
+            <label for="contrasena">Contraseña:</label>
+            <br>
+            <input type="password" name="contrasena" id="contrasena" required>
+            <br>
+            <label for="confirmarcontrasena">Confirmar contraseña:</label>
+            <br>
+            <input type="password" name="confirmarcontrasena" id="confirmarcontrasena" required>
+        </fieldset>
+        <fieldset>
+            <legend>Preferencias</legend>
+            <label for="genero">Genero:</label>
+            <br>
+            <label for="masculino">Masculino</label>
+            <input type="radio" name="genero" id="masculino" valor="masculino">
+            <br>
+            <label for="femenino">Femenino</label>
+            <input type="radio" name="genero" id="femenino" valor="femenino">
+            <br>
+            <label for="nodecirlo">Prefiero no decirlo</label>
+            <input type="radio" name="genero" id="nodecirlo" valor="nodecirlo">
+            <br>
+            <label for="hobbies">Hobbies:</label>
+            <br>
+            <label for="musica">Música</label>
+            <input type="checkbox" name="hobbies" id="musica" valor="musica">
+            <br>
+            <label for="deportes">Deportes</label>
+            <input type="checkbox" name="hobbies" id="deportes" valor="deportes">
+            <br>
+            <label for="tecnologia">Tecnología</label>
+            <input type="checkbox" name="hobbies" id="tecnologia" valor="tecnologia">
+            <br>
+            <label for="Lectura">Lectura</label>
+            <input type="checbox" name="hobbies" id="lectura" valor="lectura">
+            <br>
+            <label for="otros">Otros</label>
+            <input type="checkbox" name="hobbies" id="otros" valor="otros">
+            <br>
+            <label for="Ciudad">Ciudad</label>
+                <select name="ciudad" id="ciudad">
+                    <option value="alicante">Alicante</option>
+                    <option value="malaga">Malaga</option>
+                    <option value="zaragoza">Zaragoza</option>
+                    <option value="madrid">Madrid</option>
+                </select>
+        </fieldset>
+        <fieldset>
+            <legend>Sobre ti</legend>
+            <label for="sobreti">Cuéntanos algo sobre ti:</label>
+            <input type="textarea" name="sobreti" id="sobreti">
+        </fieldset>
+    </form>
+    
+</body>
+</html>

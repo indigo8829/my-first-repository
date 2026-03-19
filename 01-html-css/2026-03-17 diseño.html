@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Responsive</title>
+    <style>
+        .container {
+            display: flex;
+            border: 1px dotted gray; 
+            background-color: antiquewhite;
+            /*width: 800px;*/
+            /*width: 100%;*/
+            max-width: 800px;
+            margin: auto;  /*coloca el elemento en el medio*/
+            margin-top: 50px;
+            flex-direction: row; /*dirección de los items vertical y horizontal*/
+            justify-content:center;/*alinear los ítems del eje principal*/
+            flex-wrap: wrap; /*convertir el contenedor flexbox en multilinea*/
+           
+         
+        }
+        .item {
+            width: 180px;
+            height: 180px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .item-first {
+            order: 1; /*modifcar y establecer el orden de los items según la secuencia numérica*/
+        }
+        .item-second {
+            order: 2;
+        }
+        .item-null{
+            order:-1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Bloque A</div>
+         <!--<div class="item item-null">Bloque B</div>
+        <div class="item item-second">Bloque C</div>
+        <div class="item item-first">Bloque D</div>
+        <div class="item">Bloque E</div>
+        <div class="item">Bloque F</div>
+        <div class="item">Bloque G</div>
+        <div class="item">Bloque H</div>-!>
+    </div>
+</body>
+</html>
