@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .padre {
+            margin: 10px;
+            padding: 10px;
+            border:2px solid black;
+        }
+
+        .padre div {
+            display: inline-block;
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+        }
+        .padre .dos {
+            border:2px solid green; 
+            margin:10px;
+            padding:10px; 
+            height: 300px;
+            width: 300px;
+            display: block;
+
+        }
+
+        .padre .dos div:first-child{
+            background-color: blue;
+        }
+
+        .padre .dos div:hover {
+            background-color: aqua;
+        }
+
+        .padre div:hover {
+            background: yellow;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="padre">
+        <div class="dos">
+           <div></div>
+           <div></div>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

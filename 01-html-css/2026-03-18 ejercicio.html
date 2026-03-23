@@ -5,37 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseño Responsive</title>
     <style>
-        .container {
+        .galeria {
             display: flex;
-            border: 1px dotted gray; 
-            background-color: antiquewhite;
-            max-width: 800px;
-            margin: auto;  
-            margin-top: 50px;
-            flex-direction: row; 
-            justify-content:center;
-            flex-wrap: wrap; 
-           
-         
-        }
-        .item {
-            width: 180px;
-            height: 180px;
-            border: 1px solid black;
-            display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
-
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 875px;
+            background-color: burlywood;
+            border: 1px solid black;
+            margin: 50% auto; 
+            row-gap: 10px;
+            column-gap: 10px;
         }
         
+        .image-holder {
+            background-color: rgb(239, 192, 129);
+            border:1px dotted blueviolet;
+            width: 200px;
+            height: 200px;
+        }
+        .image-holder img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* recorte sin deformar */
+            object-position: center; /*center el recorte*/
+        }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="item"> <img src="" alt=""></div>
-        <div class="item "></div>
-        <div class="item "></div>
-        <div class="item "></div>
+    <div class="galeria">
+        <div class="image-holder"> <img src="https://fastly.picsum.photos/id/325/200/200.jpg?hmac=ZCsEKv0ID3Pljov7A1Ljhc4gOcr8fsqzEry_bTjeY2s" alt=""></div>
+        <div class="image-holder"><img src="https://fastly.picsum.photos/id/325/200/200.jpg?hmac=ZCsEKv0ID3Pljov7A1Ljhc4gOcr8fsqzEry_bTjeY2s" alt=""></div>
+        <div class="image-holder"><img src="https://fastly.picsum.photos/id/325/200/200.jpg?hmac=ZCsEKv0ID3Pljov7A1Ljhc4gOcr8fsqzEry_bTjeY2s" alt=""></div>
+        <div class="image-holder"><img src="https://fastly.picsum.photos/id/325/200/200.jpg?hmac=ZCsEKv0ID3Pljov7A1Ljhc4gOcr8fsqzEry_bTjeY2s" alt=""></div>
     </div>
 </body>
 </html>
