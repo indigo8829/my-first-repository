@@ -1,0 +1,85 @@
+<!--
+Estefanía Molina Giménez
+28/03/2026
+Crear una tabla y un formulario con HTML y CSS
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>La Web de los datos</title>
+</head>
+<body>
+    <main>
+        <div class="tabla">
+            <table>
+                <thead>
+                    <tr>
+                       <th>Nombre</th>
+                       <th>Email</th> 
+                       <th>Fecha de nacimiento</th>
+                       <th>Género</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alicia</td>
+                        <td>aliciagd91@gmail.com</td>
+                        <td>19/01/1991</td>
+                        <td>Femenino</td>
+                    </tr>
+                    <tr>
+                        <td>Carlos</td>
+                        <td>lafuentecarlos@gmail.com</td>
+                        <td>30/08/1992</td>
+                        <td>Masculino</td>
+                    </tr>
+                    <tr>
+                        <td>Alberto</td>
+                        <td>albertogarcia@gmail.com</td>
+                        <td>14/11/1992</td>
+                        <td>Masculino</td>
+                    </tr>
+                    <tr>
+                        <td>Aroa</td>
+                        <td>arimartinez92@gmail.com</td>
+                        <td>19/12/1993</td>
+                        <td>Femenino</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="formulario">
+            <form action="enviado.html" method="post">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Introduce tu correo electrónico" required>
+                <label for="fecha_nac">Fecha de Nacimiento</label>
+                <input type="date" name="fecha_nac" id="fecha_nac">
+                <!--<label for="genero">Género</label>-->
+                <fieldset>
+                    <legend>Género</legend>
+                    <div class="item-radio">
+                        <input type="radio" name="genero" id="masculino" value="masculino">
+                        <label for="masculino">Masculino</label>
+                    </div>
+                    <div class="item-radio">
+                        <input type="radio" name="genero" id="femenino" value="femenino">
+                        <label for="femenino">Femenino</label>
+                    </div>
+                </fieldset>
+                <div class="botones">
+                    <button type="reset">Borrar</button>
+                    <button type="submit">Envíar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    
+</body>
+</html>

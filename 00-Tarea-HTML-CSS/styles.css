@@ -1,0 +1,146 @@
+/*REQUISITOS MINIMOS DE CSS: 
+Insertar borde a la tabla
+Tabla a la izquierda
+Formulario a la derecha*/
+
+ * {
+    box-sizing: border-box; /*RESETEAR (dimension total real)*/
+ }
+ 
+ body {
+    margin: 0px;
+ }
+    
+/*=====Contenedor principal + 2 items=====*/
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width:100%;
+    background-color: #ffff;
+    padding: 10px 10px;
+    border: 2px dotted #6a6a6a;
+    border-radius: 5px;
+}
+
+.tabla {
+    max-width: 600px; /*contenedor max. para formulario*/
+    width: 100%;
+    background-color: #e3d4fc;
+    border: 2px solid #7d35f8;
+    border-radius: 5px;
+    box-shadow: 2px 5px #6a6a6a;
+    margin: 5px;
+    padding: 5px;
+}
+
+.formulario {
+    max-width: 300px;  /*contenedor max. para formulario*/
+    width: 100%;
+    background-color: #eef3fe;
+    border: 2px solid #3573f8;
+    border-radius: 5px;
+    box-shadow: 2px 5px #6a6a6a;
+    margin: 5px;
+    padding: 5px;
+
+}
+
+/*=======Elementos individuales =========*/
+/*===== Tabla ===========================*/
+table {
+    width: 100%;
+    border: 1px solid #6a6a6a ;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px dotted #6a6a6a ;
+    padding: 5px;
+    height: 15px;
+}
+
+thead {
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium';
+    text-align: center;
+    text-transform: capitalize;
+    color: #7d35f8;
+    background-color: #ffff;
+}
+
+tbody {
+    font-size: 12px;
+    font-family:'Segoe UI';
+    text-align:left;
+    color:#000000;
+    background-color: #eef3fe;
+}
+
+/*====== Formulario =====================*/
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin:5px 5px; 
+}
+
+label, legend {
+    font-family: 'Franklin Gothic Medium';
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 14px;
+    color:#3573f8;
+}
+
+input, fieldset {
+    border: 1px dotted #3573f8;
+    border-radius: 4px;
+    padding: 4px 4px;
+    margin: 5px 2px;
+    box-sizing: border-box; 
+}
+
+.item-radio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    gap: 5px;
+}
+
+.botones {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+button {
+    width: 40%;
+    background-color: #3573f8;  
+    color: #ffff;
+    border: 2px solid #ffff;
+    padding: 10px 10px;
+    margin: 2px 2px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 1px #6a6a6a;
+}
+
+/*DOCUMENTO ENVIO FORMULARIO*/
+.form-enviado {
+    width: 100%;
+    height: 100px;
+    font-family: 'Franklin Gothic Medium';
+    font-weight: bold;
+    font-size: 30px;
+    color: #3573f8;
+    background-color: #eef3fe;
+    text-align: center;
+}
