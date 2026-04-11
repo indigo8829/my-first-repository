@@ -1,0 +1,37 @@
+<!--
+Dentro del div aparece el numero 0
+Cada vez que el raton entra al div 
+El cero se incrementa
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            max-width: 200px;
+            height: 200px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="caja">0</div> 
+</body>
+<script>
+/*declarar las variables*/
+    let contador = document.getElementById("caja");
+
+    /*funcion*/
+    function aumentarContador () {
+        contador ++;
+        document.write(contador);
+    }
+
+    /*llamar a la funcion cuando pasamos el raton con el metodo addEventListener*/
+    cajaContador.addEventListener("onmouseover", aumentarContador);
+
+</script>
+</html>

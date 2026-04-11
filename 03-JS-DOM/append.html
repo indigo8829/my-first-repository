@@ -1,0 +1,35 @@
+<!--Crear un HTML con un div que tenga un borde, un texto y una id.
+Hay que generar dinámicamente nuevo div (con borde de otro color y texto) y añadirlo dentro del primer div.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #caja {
+            max-width: 300px;
+            height: 300px;
+            border:2px solid black;
+            text-align: center;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="caja">Esto es una caja origen</div>
+</body>
+<script>
+    //declarar variable que define el nodo.
+    const divOrigen = document.getElementById ("caja");
+    //crear el nuevo nodo/elemento y lo almacena en una variable
+    const nuevoDiv =document.createElement("div");
+    //escribir el contenido del nodo
+    nuevoDiv.textContent = "caja 2"
+    //estilos borde 
+    nuevoDiv.style.border="2px solid blue";
+    //insertarlo en la página dentro del div con id. 
+    divOrigen.append(nuevoDiv);
+</script>
+</html>

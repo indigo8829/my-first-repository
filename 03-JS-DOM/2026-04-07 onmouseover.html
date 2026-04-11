@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Eventos del DOM de HTML</h1>
+    <h2>El evento onmouseover</h2>
+    <p>Utilice el DOM de HTML para asignar un evento "onmouseover" y el "onmouseout" a un elemento h1</p>
+</body>
+<script>
+    document.getElementById("demo").onmouseover = function () {
+        mouseOver()
+    };
+    document.getElementById("demo").onmouseover = function () {
+        mouseOut()
+    };
+    
+    function mouseOver () {
+        document.getElementById("demo").style.color="red";
+    }
+
+    function mouseOut () {
+        document.getElementById("demo").style.color="red";
+    }
+
+</script>
+</html>

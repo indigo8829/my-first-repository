@@ -1,0 +1,156 @@
+<!--
+Tarea:
+1.	Crear un HTML con una tabla de dos columnas: nombre, apellido.
+2.	En la tabla hay 3 filas con datos.
+3.	Con JavaScript hay que añadir una nueva fila.
+4.  Añadir la fila antes o después de... (preppend o append).
+5.  Borrar alguna fila de la tabla (con una id.)
+
+OJO! Hay que:
+1.	Crear un <tr>
+2.	Crear dos <td> e insertarlos al <tr>
+3.	Insertar el <tr> al final de la tabla
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        table {   
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px 20px;
+        }
+
+        th {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <table id="alumnos">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="fila-eliminar">
+                <td>Alicia</td>
+                <td>Martinez</td>
+            </tr>
+            <tr>
+                <td>María</td>
+                <td>Gutierrez</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script>
+    /*============================== INSERTAR UNA ÚLTIMA FILA  ============================*/
+    //declar varible que define el elemento/nodo TABLA.
+    const tableAlumnos = document.getElementById ("alumnos");
+    //declarar una variable que almacene el nodo, body de la misma tabla. 
+    const tbody = tableAlumnos.querySelector("tbody");
+
+    //crear el  nodo/elemento y almacenarlo en una variable (ULTIMA FILA)
+    const nuevoTr = document.createElement ("tr");
+
+    //crear el nodo/elemento y almacernarlo en una variable (CELDA NAME)
+    const tdName = document.createElement ("td");
+    //escribir el contenido del nodo 
+    tdName.textContent = "Carlos";
+
+    //crear el nodo/elemento y almacernarlo en una variable (CELDA APELLIDO)
+    const tdLastname = document.createElement ("td");
+    //escribir el contenido del nodo
+    tdLastname.textContent = "Zaragoza";
+
+    //insertar la celda en la fila nueva.
+    nuevoTr.append(tdName);
+    nuevoTr.append(tdLastname);
+    
+    //insertar la fila en el documento html en la tabla.
+    tbody.append(nuevoTr);
+
+    //=======================================================================================
+    /*============================== INSERTAR UNA FILA DELANTE ============================*/
+    //declarar una variable que almacene todas las filas del body de la tabla alumnos (NodeList). 
+    //filas[0], filas[1], filas[2].
+    //let filas = tbody.querySelectorAll("tr");  
+    
+    //crear el  nodo/elemento y almacenarlo en una variable (ULTIMA FILA)
+    const primerTr = document.createElement ("tr");
+
+    //crear el nodo/elemento y almacernarlo en una variable (CELDA NAME)
+    const tdName1 = document.createElement ("td");
+    //escribir el contenido del nodo 
+    tdName1.textContent = "Zara";
+
+    //crear el nodo/elemento y almacernarlo en una variable (CELDA APELLIDO)
+    const tdLastname1 = document.createElement ("td");
+    //escribir el contenido del nodo
+    tdLastname1.textContent = "Vargas";
+
+    //insertar la celda en la fila.
+    primerTr.append(tdName1);
+    primerTr.append(tdLastname1);
+
+    //insertar la fila en el documento html en la tabla (primera fila despues del encabezado).
+    //insertamos el nodo Tr (fila nueva) antes del nodo Tr (fila existente).
+    //tbody.insertBefore(primerTr, filas[0]);  
+    tbody.prepend(primerTr);
+
+    //=============================================================================
+    /*============================== BORRAR UNA FILA ============================*/
+    //declara una variable que contega el elemento/nodo a eliminar
+    const filaBorrar = document.getElementById ("fila-eliminar");
+    filaBorrar.remove();
+
+    //==================================================================================================
+    /*============================== INSERTAR UNA FILA EN LA PENÚLTIMA FILA ============================*/
+    //¿cuantas filas tenemos en la tabla (tr) ahora? 
+    //actualizar la variable con la cantidad de filas actuales.
+    let filasAhora = tbody.querySelectorAll("tr");
+    //console.log(filasAhora.length);
+
+    //crear el  nodo/elemento y almacenarlo en una variable (ULTIMA FILA)
+    const penultimaTr = document.createElement ("tr");
+
+    //crear el nodo/elemento y almacernarlo en una variable (CELDA NAME)
+    const tdNameP = document.createElement ("td");
+    //escribir el contenido del nodo 
+    tdNameP.textContent = "Olivia";
+
+    //crear el nodo/elemento y almacernarlo en una variable (CELDA APELLIDO)
+    const tdLastnameP = document.createElement ("td");
+    //escribir el contenido del nodo
+    tdLastnameP.textContent = "Penalva";
+
+    //insertar la celda en la fila.
+    penultimaTr.append(tdNameP);
+    penultimaTr.append(tdLastnameP);
+    
+    //insertar la fila nueva en el doc html en la tabla (penultima fila)
+    //insertar el nodo Tr (fila nueva) antes del nodo Tr (ultima fila existente)
+    tbody.insertBefore(penultimaTr, filasAhora [filasAhora.length -1]);
+
+</script>
+</html>

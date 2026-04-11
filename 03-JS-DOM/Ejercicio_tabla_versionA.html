@@ -1,0 +1,92 @@
+<!--
+Tarea:
+1.	Crear un HTML con una tabla de dos columnas: nombre, apellido.
+2.	En la tabla hay 3 filas con datos.
+3.	Con JavaScript hay que añadir una nueva fila.
+4.  Añadir la fila antes o después de... (preppend o append).
+5.  Borrar alguna fila de la tabla (con una id.)
+
+OJO! Hay que:
+1.	Crear un <tr>
+2.	Crear dos <td> e insertarlos al <tr>
+3.	Insertar el <tr> al final de la tabla
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: 0px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        table {   
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px 20px;
+        }
+
+        th {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <table id="alumnos">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="fila-eliminar">
+                <td>Alicia</td>
+                <td>Martinez</td>
+            </tr>
+            <tr>
+                <td>María</td>
+                <td>Gutierrez</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script>
+    /*===================OPCION CON FUNCION==================*/
+    /* == DECLARAR LAS VARIABLES PARA CREAR LA NUEVA FILA DE LA TABLA ==========*/
+    //declar varible que define el elemento/nodo TABLA.
+    const tablaAlumnos = document.getElementById ("alumnos");
+    //declarar una variable que almacene el nodo, body de la misma tabla. 
+    const tbody = tablaAlumnos.querySelector("tbody");
+
+    //Crear funcion para crear la fila con sus respectivas celdas.
+
+    function crearFila (nombre, apellido) {
+        const nuevoTr = document.createElement ("tr");
+        const tdName = document.createElement("td");
+        tdName.textContent = nombre;
+        const tdLastname = document.createElement ("td");
+        tdLastname.textContent = apellido;
+
+        nuevoTr.append(tdName,tdLastname);
+
+        return nuevoTr;
+    }
+    //insertar la fila en el documento html llamando a la funcion y como parametros (nombre y apellido)
+    tbody.append(crearFila("Carlos","Zaragoza"));
+    tbody.prepend(crearFila("Zara","Vargas"));
+    
+</script>
+</html>

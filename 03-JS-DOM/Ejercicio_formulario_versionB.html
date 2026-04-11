@@ -1,0 +1,40 @@
+<!--MANIPULACIÓN DEL DOM CON JAVASCRIPT
+Capturar valores de inputs en formularios
+mi formula con funcion normal -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formularios con jS</h1>
+    
+    <form method="post" id="mi-form">
+        <input id="username" type="text" name="username" placeholder="Nombre" autocomplete="off">
+        <input id="password" type="password"  name="contrasena">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+<script>
+    //declara una variable que define el elemento/nodo mi-form (formulario)
+    const miForm = document.getElementById("mi-form");
+    
+    //declarar una variable que almacene el input.
+    //const inputText = document.getElementById("username");
+    //const inputPass = document.getElementById("password");
+    const inputText = miForm.querySelector("#username");
+    const inputPass = miForm.querySelector("#password");
+
+    //escucha el evento de cuando se envia el formulario  
+    miForm.addEventListener("submit", function (evento) {
+        //evita que se recargue la página
+        evento.preventDefault();
+        //accede al input por su variable y saca su value
+        console.log(inputText.value);
+        console.log(inputPass.value);0.
+    });
+    
+</script>
+</html>

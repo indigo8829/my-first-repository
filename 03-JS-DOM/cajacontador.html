@@ -1,0 +1,67 @@
+<!--
+Dentro del div aparece el numero 0
+Cada vez que el raton entra al div 
+El cero se incrementa
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            max-width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin-left: 50%;
+            text-align: center;
+            font-size: 90px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="caja">0</div> 
+</body>
+<script>
+/*declarar la variable que identifica el nodo*/
+const caja = document.getElementById("caja");
+/*leer el contenido del nodo - div*/
+let contador= caja.textContent; 
+
+/*comprobar tipo variable (string)*/
+console.log(typeof contador);
+
+/*convertir la variable string a numero y comprobar*/
+contador= Number(contador);
+console.log(typeof contador);
+
+
+/*funcion para aumentar el contador*/
+function aumentarContador () {
+    contador++;  
+    caja.textContent = contador; /*escribir el resultado del contador en la caja (nodo-div)*/
+}
+
+/*acceder al nodo y mediante el metodo addEventListener llamar a la funcion cuando accede el evento del raton (mouseover, mouseenter...)*/
+caja.addEventListener ("mouseenter",aumentarContador);
+
+///////////// Otra idea: que al hacer clic se reinicie el contador a 0. 
+
+/*cuando haga click en el nodo caja */
+caja.addEventListener ("click", hacerClick);
+
+function hacerClick () {
+    contador=0;
+    caja.textContent = contador; 
+}
+
+
+
+      
+
+
+
+</script>
+</html>

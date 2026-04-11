@@ -1,0 +1,43 @@
+<!--MANIPULACIÓN DEL DOM CON JAVASCRIPT
+Capturar valores de inputs en formularios
+formula profe con funcion flecha-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formularios con jS</h1>
+    
+    <form method="post" id="mi-form">
+        <input type="text" name="username" placeholder="Nombre" autocomplete="off">
+        <input type="password" name="contrasena">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+<script>
+    //declara una variable que define el elemento/nodo mi-form (formulario)
+    const miForm = document.getElementById("mi-form");
+    //console.log(miForm);
+    
+    //escucha el evento de cuando se envia el formulario  
+    miForm.addEventListener("submit", (event) => {
+        //evita que se recargue la página
+        event.preventDefault();
+        //console.log("In function...", event); 
+
+        //declara una variable y almacena el formulario (target es una propiedad del evento, elemento que hace saltar el evento)
+        //evento.target === miForm pero sin variables
+        let formValues = event.target;
+        console.log ("Form values: ", formValues);
+        console.log (typeof formValues);
+
+        //accede al input por su "username" y saca su value
+        console.log("Campo valor: ",formValues.username.value);
+        console.log("Campo password: ",formValues.contrasena.value);
+    });
+
+</script>
+</html>

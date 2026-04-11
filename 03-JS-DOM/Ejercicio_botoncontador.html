@@ -1,0 +1,26 @@
+<!--
+Cada vez que haces click en el Botón, en consola cuenta cuantas veces estas haciendo click.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click here</button>
+</body>
+<script>
+    /*declarar las variables*/
+    let contador= 0; 
+    const boton= document.getElementById("btn");
+    /*funcion*/
+    function avanzar() {
+        contador++;
+        console.log(contador);
+    }
+    /*llamar a la funcion cuando damos click con el metodo addEventListener */
+    boton.addEventListener("click",avanzar);
+</script>
+</html>
