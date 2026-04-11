@@ -1,0 +1,137 @@
+<!--Tabla de usuarios - formulario + manipulación del DOM.
+Escribir un fichero HTML que muestre una tabla de usuarios con 2-3 usuarios iniciales.
+Al lado o debajo de la tabla tiene que haber un formulario para poder añadir nuevos usuarios.
+Los campos del formulario tienen que corresponder a las columnas de la tabla (como mínimo nombre y apellido).
+Al enviar los datos, el usuario se agrega al final de la tabla.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contenedor-principal {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: flex-start;
+            gap:10px;           
+        }
+        
+        .tabla, .formulario {
+            margin: 30px auto;           
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px 20px;
+        }
+
+        th {
+            background-color: rgb(157, 233, 193);
+        }
+
+        .formulario > form {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main class="contenedor-principal">
+        <section class="tabla">
+            <table id="usuarios">
+                <caption>Usuarios Registrados</caption>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alicia</td>
+                        <td>Martinez</td>
+                        <td>alimartinez@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>María</td>
+                        <td>Gutierrez</td>
+                        <td>mariag92@gmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="formulario">
+            <h1>Formulario de Registro:</h1>
+            <form action="" method="post" id="form_usuarios">
+                <label for="nombreUsuario"></label>
+                <input type="text" id="nombre_usuario" name="nombreUsuario" placeholder="Nombre" autocomplete="off">
+                <label for="apellidoUsuario"></label>
+                <input type="text" id="apellido_usuario" name="apellidoUsuario" placeholder="Apellidos" required>
+                <label for="email">Correo Electrónico:<input type="email" id="email" name="email" required></label>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+</body>
+<script>
+    /* === DECLARAR LAS VARIABLES PARA LEER/CAPTURAR LOS DATOS DEL FORMULARIO ======================*/
+    //declara una variable que define el elemento/nodo mi-form (formulario)
+    const formUsuarios = document.getElementById("form_usuarios");
+    //declarar las variables que almacenen los input.
+    const input_nombre = formUsuarios.querySelector("#nombre_usuario");
+    const input_apellido = formUsuarios.querySelector("#apellido_usuario");
+    const input_email = formUsuarios.querySelector("#email");
+
+    /* == DECLARAR LAS VARIABLES PARA CREAR LA NUEVA FILA DE LA TABLA ==========*/
+    //declar varible que define el elemento/nodo TABLA.
+    const tablaUsuarios = document.getElementById ("usuarios");
+    //declarar una variable que almacene el nodo, body de la misma tabla. 
+    const tbody = tablaUsuarios.querySelector("tbody");
+    /* == CREAR LA NUEVA FILA Y SUS RESPECTIVAS CELDAS PARA ESCRIBIR LOS DATOS OBTENIDOS DEL FORMULARIO  ==========*/
+    //Crear funcion para crear la fila con sus respectivas celdas.
+    function crearFila (nombre, apellido, email) {
+        //crear una nueva fila y celdas correspondientes
+        const nuevoTr = document.createElement("tr");
+        const tdName = document.createElement("td");
+        const tdLastname = document.createElement("td");
+        const tdEmail = document.createElement("td");
+        //escribir el contenido de las celdas (parametros)
+        tdName.textContent = nombre;
+        tdLastname.textContent = apellido;
+        tdEmail.textContent = email; 
+        //agregar celdas a la fila
+        nuevoTr.append(tdName,tdLastname,tdEmail);
+        //devolver la fila resultado funcion
+        return nuevoTr; 
+    }
+
+    /* === LEER/CAPTURAR LOS DATOS INTRODUCIDOS POR EL USUARIO EN EL FORMULARIO, ALMACENARLOS Y ESCRIBIRLOS =======*/
+    //escucha el evento de cuando se envia el formulario  
+    formUsuarios.addEventListener("submit", function (evento) {
+        //evita que se recargue la página
+        evento.preventDefault();
+        //accede al input por su variable y saca su value.
+        const nombre_value = input_nombre.value;
+        const apellido_value =input_apellido.value;
+        const email_value = input_email.value;
+
+        //insertar la fila en el documento llamando a la funcion e insertando los valores del input (parametros).
+        tbody.append(crearFila(nombre_value, apellido_value, email_value));
+        //limpiar el formulario tras envio datos.
+        formUsuarios.reset();       
+    }); 
+  
+</script>
+</html>
