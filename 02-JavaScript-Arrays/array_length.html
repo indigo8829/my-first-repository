@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <!--Obteniendo el nombre más largo de un array. Declara un array nombres con al menos 6 nombres. 
+        Obtén el nombre más largo del array nombres. Tener en cuenta que los "Strings" son listas de
+        caracteres y que las listas tienen un largo (length) que indica su tamaño.*/
+        //declarar un array de 8 elementos.-->
+  <script>
+    //declarar la array nombres
+    let nombres = new Array(8);
+    //inicializar el array con los nombres.
+    nombres = [
+      "carla",
+      "oscar",
+      "carla",
+      "javier",
+      "pedro",
+      "alex",
+      "fatima",
+      "estefania",
+    ];
+
+    //console.info(nombres);
+    
+    //declarar una variable que almacene el nombre mas largo.
+    //e inicializarla con el valor del elemento pos 0 del array original
+    let nombreLargo = nombres[0];
+    //recorrer el array para encontrar el nombre con más letras.
+    for (let i = 0; i < nombres.length; i++) {
+        // si el tamaño de cada elemento del array es mayor al tamaño de cada elemento de la variable (nombrelargo)
+        if (nombres[i].length > nombreLargo.length) {
+            //actualizar la variable
+            nombreLargo = nombres[i];
+      }
+    }
+
+    //mostrar resultado en pantalla.
+    document.write("el nombre con más letras es: " + nombreLargo + "<br>");
+  </script>
+</html>

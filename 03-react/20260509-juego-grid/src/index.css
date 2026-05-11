@@ -1,0 +1,25 @@
+/*
+contenedor principal se convierte display grid.
+repeat(), repite conjunto de columnas/filas en cuadricula
+10 columnas/filas en partes iguales  400/10=40px*/
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    margin: 50px auto;
+    border: 2px solid rgb(1, 1, 1);
+    width: 400px;
+    height: 400px;
+}
+
+/*border-box para no contabilizar bordes de celdas como tamaño final*/
+.celda {
+    box-sizing: border-box;
+    border: 1px solid rgb(218, 217, 217); 
+}
+
+.celda-elegida {
+    background-color: rgb(159, 133, 245);
+    border: 1px solid rgb(47, 0, 201);
+}

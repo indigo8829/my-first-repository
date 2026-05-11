@@ -1,0 +1,12 @@
+* {
+    box-sizing: 0px border-box;
+    background-color: #ffdfdd;
+}
+
+.tarjeta {
+    background-color: #ffdfdd;
+    border-radius: 2px solid #00000000;
+    padding: 20px;
+    margin: 20px;
+    color: #a22c23;
+}

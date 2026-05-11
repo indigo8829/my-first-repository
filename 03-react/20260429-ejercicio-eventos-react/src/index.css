@@ -1,0 +1,31 @@
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    color: #ffff;
+}
+
+.rojo {
+    background-color: red;
+    
+}
+
+.azul {
+    background-color: blue;
+}
+
+.negro {
+    background-color: black;
+}
+
+.pequeño {
+    padding: 5px;
+}
+
+.mediano {
+    padding: 20px;
+}
+
+.grande {
+    padding: 30px;
+}

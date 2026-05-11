@@ -1,0 +1,21 @@
+.gran-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 70%;
+  margin: 10px auto;
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 8px;
+  background-color: gray;
+}
+
+button {
+  padding: 100px;
+  margin: 40px;
+  border: 1px solid gray;
+  color: #0f0f0f;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}

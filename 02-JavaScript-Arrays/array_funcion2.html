@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <!--Crear un array con elementos de tipo string. Almacenar los meses del año. En una función, 
+  solicitar el ingreso de un número entre 1 y 12.  Mostrar a qué mes corresponde y cuántos días tiene dicho mes.-->
+  <script>
+    //funcion para solicitar por consola un numero del mes.
+    function mostrarFecha(meses, dias) {
+      //solicitar por consola el num y almacenar en variable como entero.  
+      let num = parseInt(prompt("Ingrese número de mes:"));
+      //imprimir resultado.
+      document.write("Corresponde al mes:" + meses[num - 1]);
+      document.write("<br>");
+      document.write("Tiene " + dias[num - 1] + " días");
+    }
+    
+    //=================INICIO DEL PROGRAMA==========
+    //declarar variable array con los meses del año. 
+    let meses = [
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre",
+    ];
+    //declarar variable array con los dias de cada mes.
+    let dias = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    //llamar a la funcion
+    mostrarFecha(meses, dias);
+  </script>
+</html>

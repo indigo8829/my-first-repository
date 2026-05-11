@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <!--Crear un array para almacenar los cinco sueldos de operarios y mostrar el total de gastos en sueldos (cada actividad en una función)-->
+  <script>
+    //crear funcion para cargar los sueldos de los operararios por consola
+    function cargar(sueldos) {
+        //recprrer el array y almacenar cada sueldo cargado
+        for (let f = 0; f < sueldos.length; f++) {
+        let valor = prompt("Ingrese sueldo:");
+        sueldos[f] = parseInt(valor);
+      }
+    }
+    //crear una funcion para calcular el total de los sueldos.
+    function calcularGastos(sueldos) {
+      //declarar variable para sumar total
+      let total = 0;
+      //recorrer el array, leer cada sueldo y añadirlo al total.
+      for (let f = 0; f < sueldos.length; f++) {
+        total = total + sueldos[f];
+      }
+      //imprimir en documento la lista de sueldos.
+      document.write("Listado de sueldos:<br>");
+      //recorrer el array
+      for (let f = 0; f < sueldos.length; f++) {
+        //imprimir cada valor del array
+        document.write(sueldos[f] + "<br>");
+      }
+      //imprmir el valor de la variable que contiene el total de los sueldos.
+      document.write("Total de gastos en sueldos: " + total + " €");
+    }
+
+    //=======INICIO DEL PROGRAMA=================
+    //declarar variables
+    let sueldos;
+    sueldos = new Array(5);
+    //llamar funciones
+    cargar(sueldos);
+    calcularGastos(sueldos);
+  </script>
+</html>

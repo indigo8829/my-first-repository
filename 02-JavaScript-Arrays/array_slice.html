@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<!--Crear un array de 10 elementos con valores aleatorios comprendidos entre 0 y 1000. Buscar el menor y luego generar
+ otro array a partir de dicha posición hasta el final.-->
+ <script>
+        //declarar un array vacio
+        let caja = [];
+        //recorrer el array
+        for (let f = 0; f < 10; f++) {
+            //almacenar en cada elemento un entero generado aleatoriamente (0-1000)
+            caja[f] = parseInt(Math.random() * 1001);
+        }
+        //imprimir la array original
+        document.write("Array original <br>");
+        //recorrer la array
+        for (let f = 0; f < caja.length; f++) {
+            //imprimr cada elemento en el doc
+            document.write(caja[f] + ' - ');
+        }
+
+        document.write("<br>");
+        
+        //declarar un array que almacenene el numero mas pequeño.
+        //inicializar con el elemento de la posicion inicial del array original
+        let menor = caja[0];
+        let pos = 0;
+        //recorrer el array 
+        for (let f = 1; f < caja.length; f++) {
+            //si el valor del elemento es menor al valor de la variable (menor).
+            if (caja[f] < menor) {
+                //actualizar el valor de la variable
+                menor = caja[f];
+                //actualizar el contador (posicion)
+                pos = f;
+            }
+        }
+
+        //imprimir el resultado del elemento menor
+        document.write("Elemento menor del array: " + menor);
+        document.write("<br>");
+
+
+        //declar un array para capturar el resto del array desde la posicion del numero menor.
+        let caja2 = caja.slice(pos);
+        //imprimir el array resultante final
+        document.write("Array resultante de la llamada a slice <br>");
+        //recorrer el array
+        for (let f = 0; f < caja2.length; f++) {
+            //imprimir cada elemento
+            document.write(caja2[f] + " - ");
+        }
+    </script>
+</html>

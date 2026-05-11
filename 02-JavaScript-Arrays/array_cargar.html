@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+  </body>
+  <!--Crear un array vacío. Mediante una estructura repetitiva solicitar la carga de elementos por teclado hasta que se ingrese el cero. No 
+    almacenar dicho valor en el array. Luego sumar todas las componentes del array, mostrar dicha suma y el tamaño del array.-->
+  <script>
+    //===================CARGAR LOS ELELEMNTOS POR TECLADO=========
+    //declarar las variables.
+    let array = [];
+    let valor;
+    let indice = 0;
+    //ingresar valores para el array mientras el valor sea distntio de 0
+    do {
+      valor = prompt("Ingrese un valor entero (0 para finalizar)", "");
+      valor = parseInt(valor);
+      //si el valor es diferente de 0 
+      if (valor != 0) {
+        //almacenar el valor en cada posicion del array
+        array[indice] = valor;
+        //aumentar el indice del array 
+        indice++;
+      }
+    } while (valor != 0);
+    //===================SUMAR LOS ELEMENTOS DEL ARRAY =============
+    //declarar una variable que acumule la suma total de los elementos.
+    let suma = 0;
+    //recorrer la array y sumar cada uno de los elementos el la variable suma total.
+    for (let f = 0; f < array.length; f++) {
+      suma = suma + array[f];
+    }
+
+    //============IMRPRIMIR LOS RESULTADOS EN EL DOCUMENTO ========= 
+    document.write("Se ingresaron " + array.length + " valores<br>");
+    document.write("La suma de los valores ingresados es:" + suma);
+  </script>
+</html>

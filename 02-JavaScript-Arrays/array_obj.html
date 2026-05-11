@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <!--Partiendo de un array de productos debes: 
+   1 . Mostrar todos los productos.
+   2 . Mostrar solo los productos que cuesten más de 30. 
+   3 . Crear un array solo con los nombres de productos.
+   4 . Calcular el precio total.-->
+  <script>
+    //La array de productos es: 
+    let productos = [
+        { nombre: "Camiseta", precio: 20},
+        { nombre: "Pantalon", precio: 35},
+        { nombre: "Zapatos", precio: 50},
+        { nombre: "Gorra", precio: 15}
+    ];
+    
+    //Mostrar todos los productos. 
+    console.log("La lista de productos es: ");
+    //recorrer el array 
+    for (let i=0; i<productos.length; i++){
+        //imprimir de cada el elemento solo el nombre
+        console.log(productos[i].nombre);
+    }
+
+    //Mostrar solo los prodcutos de más de 30. 
+    console.log("Los productos de más de 30 son: ");
+    //recorrer el array 
+    for (let i=0; i<productos.length; i++){
+        //si el precio es mayor a 30...
+        if (productos[i].precio > 30){
+            //imprimir de cada el elemento 
+            console.log(productos[i]);
+        }
+    }
+
+    //Crear una array solo con los nombres del producto. 
+    let nombresP = [];
+
+    //recorrer el array 
+    for (let i=0; i<productos.length; i++){
+        //añadir el nombre de cada elemento en la nueva array.
+        nombresP.push(productos[i].nombre);
+    }
+    console.info(nombresP);
+
+    //Sumar los precios de todos los productos. 
+    //declarar variable que sume y acumule los precios.
+    let subTotal = 0; 
+
+    //recorrer el array 
+    for (let i=0; i<productos.length; i++){
+        //acceder al precio y añadirlo al total. 
+        subTotal = productos[i].precio + subTotal;
+        //lo mismo seria: subTotal += productos[i].precio;
+    }
+
+    console.info(subTotal);
+
+  </script>
+</html>

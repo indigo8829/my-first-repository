@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <!--RECORRER UN ARRAY CON el método forEach  -->
+  <script>
+    //declarar un array
+    let caja = [10, 20, 30, 40, 50];
+
+    //recorrer array con el método forEach
+    //al método se le pasa una función anonima con dos parametros (valor almacenado, indice del array)
+    caja.forEach(function (componente, indice) {
+      //imprimir en el documento el indice del elemento
+      document.write("Posición: " + indice + " = ");
+      //imprimir el valor almacenado 
+      document.write(componente + "<br>");
+    });
+  </script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myDiv1, #myDiv2 {
+            background-color: coral;
+            padding: 50px;
+        }
+
+        #myP1, #myP2 {
+            background-color: white; 
+            font-size: 20px;
+            border: 1px solid;
+            padding: 20px;
+        }
+</style>
+</head>
+<body>
+    <h2>JavaScript: Formas de propagación de eventos - addEventListener()</h2>
+
+    <div id="myDiv1">
+        <h2>Burbujeo de Eventos</h2>
+        <p id="myP1">Hazme Click!</p>
+    </div><br>
+
+    <div id="myDiv2">
+        <h2>Captura de eventos</h2>
+        <p id="myP2">Hazme Click!</p>
+    </div>
+    
+</body>
+<script>
+    //El valor predeterminado del parametro useCapture es FALSE. (propagación por burbujeo)
+    //addEventListener(event, function, useCapture);
+    //Propagación por burbujeo. 
+    
+    document.getElementById("myP1").addEventListener("click", function() {
+    alert("Has hecho click en el elemento blanco");
+    }, false);
+
+    document.getElementById("myDiv1").addEventListener("click", function() {
+    alert("Has hecho click en el elemento naranja");
+    }, false);
+
+    document.getElementById("myP2").addEventListener("click", function() {
+    alert("Has hecho click en el elemento blanco");
+    }, true);
+
+    document.getElementById("myDiv2").addEventListener("click", function() {
+    alert("Has hecho click en el elemento naranja");
+    }, true);
+</script>
+</html>

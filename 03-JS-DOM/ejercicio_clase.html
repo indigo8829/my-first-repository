@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" id="mi-form">
+        <label for="numero">Escribe un numero</label>
+        <input type="text" name="numero" id="num" autocomplete="off">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+<script>
+    //declara una variable que define el elemento/nodo mi-form (formulario)
+    const miForm = document.getElementById("mi-form");
+    
+    //declarar una variable que almacene el input.
+    //const inputText = document.getElementById("num");
+    const inputNum = miForm.querySelector("#num");
+    
+    //escucha el evento de cuando se envia el formulario  
+    miForm.addEventListener("submit", function (evento) {
+        //evita que se recargue la página
+        evento.preventDefault();
+        //accede al input por su variable y saca su value
+        const numValue = inputNum.value;
+        
+        //comprobar si no es un numero 
+        if (numValue.isNan (numValue)){
+
+            //si no es un numero  
+        } else 
+    }); 
+
+    
+
+
+
+</script>
+</html>

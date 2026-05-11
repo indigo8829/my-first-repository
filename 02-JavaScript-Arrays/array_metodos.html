@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <!--Crear un array con 10 valores aleatorios comprendidos entre 1 y 500.Luego crear otros dos y copiar los elementos menores a 250  en el segundo array y los mayores o iguales a 250 en el tercer array. Imprimir los tamaños del segundo y tercer vector. Imprimir los tres  arrays-->
+  <script>
+    //declarar el array primero.
+    let caja1 = [];
+    //recorrer el array
+    for (let f = 0; f < 10; f++) {
+      //almacenar en cada elemento del array el valor (entero) introducido aleatoriamente (math.random) entre 1 y 500. 
+      caja1[f] = parseInt(1 + Math.random() * 500);
+    }
+
+    //declarar las arrays 2 y 3. 
+    let caja2 = [];
+    let caja3 = [];
+    let indice1 = 0;
+    let indice2 = 0;
+
+    //recorrer el array original (primero)
+    for (let f = 0; f < caja1.length; f++) {
+      //si cada valor de sus elementos son menores a 250 
+      if (caja1[f] < 250) {
+        //alamacenar el valor en el array 2
+        caja2[indice1] = caja1[f];
+        //aumentar el indice de la array 2
+        indice1++;
+        //si no almacenar el valor en el array 3.
+      } else {
+        caja3[indice2] = caja1[f];
+        //aumentar el indice de la array 3. 
+        indice2++;
+      }
+    }
+    
+    //================MOSTRAR RESULTADOS ===================
+    //imprimir resultados del tammaño de las arrays en el documento 
+    document.write("Tamaño del primer array: " + caja1.length + "<br>");
+    document.write("Tamaño del segundo array: " + caja2.length + "<br>");
+    document.write("Tamaño del tercer array: " + caja3.length + "<br>");
+    
+    //imprimir los elementos del primer array resultante.
+    document.write("Elementos del primer array: <br>");
+    //recorrer el array 
+    for (let f = 0; f < caja1.length; f++) {
+      document.write(caja1[f] + " - ");
+    }
+    
+    document.write("<br>");
+    
+    //imprimir los elementos del segundo array resultante
+    document.write("Elementos del segundo array: <br>");
+    //recorrer el array
+    for (let f = 0; f < caja2.length; f++) {
+      document.write(caja2[f] + " - ");
+    }
+    
+    document.write("<br>");
+    
+    //imprimir los elementos del segundo array resultante
+    document.write("Elementos del tercer array: <br>");
+     //recorrer el array
+    for (let f = 0; f < caja3.length; f++) {
+      document.write(caja3[f] + " - ");
+    }
+  </script>
+</html>

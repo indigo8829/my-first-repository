@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <!--PROBANDO EL MÉTODO SLICE, extrae parte de un array sin eliminar ningun elemento del array original.-->
+  <script>
+    //declarar la array
+    let caja = [10, 20, 30, 40, 50, 60];
+
+    document.write("Vector original<br>");
+    
+    //recorrer la array
+    for (let f = 0; f < caja.length; f++) {
+        //imprimir cada elemento 
+        document.write(caja[f] + "-");
+    }
+
+    document.write("<br>");
+    
+    //declaramos una nueva array que como valores tendra los elementos desde el 1 hasta el 3 del otro array.
+    let caja1 = caja.slice(1, 4);
+
+    //imprimir la array resultante 
+    document.write("Vector resultante de la llamada a slice. <br>");
+    //recorrer la array
+    for (let f = 0; f < caja1.length; f++) {
+        //imprimir cada elemento.
+        document.write(caja1[f] + " - ");
+    }
+
+  </script>
+</html>

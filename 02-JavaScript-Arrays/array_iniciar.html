@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <!--Confeccionar un programa que defina dos array, en uno almacenar los días de la semana y en otro los nombres de los meses. 
+    Emplear dos sintaxis diferentes para crear e inicializar sus componentes.-->
+  <script>
+    //=====INICIO DEL PROGRAMA
+    //declarar la array de los meses e inicializar
+    let meses = new Array(
+      "enero",
+      "febrero",
+      "marzo",
+      "abril",
+      "mayo",
+      "junio",
+      "julio",
+      "agosto",
+      "septiembre",
+      "octubre",
+      "noviembre",
+      "diciembre",
+    );
+
+    // declarar la array de los dias e inicializar
+    let dias = [
+      "lunes",
+      "martes",
+      "miercoles",
+      "jueves",
+      "viernes",
+      "sábado",
+      "domingo",
+    ];
+
+    //recorrer el array de los meses y mostrar cada elemento
+    for (let f = 0; f < meses.length; f++) {
+      document.write(meses[f] + "<br>");
+    }
+
+    document.write("<br>");
+
+    //recorrer el array de los días y mostrar cada elemento
+    for (let f = 0; f < dias.length; f++) {
+      document.write(dias[f] + "<br>");
+    }
+  </script>
+</html>

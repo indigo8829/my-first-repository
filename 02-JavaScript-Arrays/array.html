@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <!--Partiendo del array con notas de estudiates debes:
+    1 - mostrar todas las notas, 
+    2 - crear un nuevo array solo con las notas aprobadas,
+    3 - calcular la media de las notas, 
+    4 - encontrar la nota más alta, 
+    5 - encontrar la nota más baja -->
+  <script>
+    //==========ARRAY NOTAS===========================
+    let notas = [5, 8, 3, 10, 7, 2, 9];
+
+    //=============MOSTRAR TODAS LAS NOTAS=============
+    //Recorrer el array y mostrar todas las notas.
+    for (let i = 0; i < notas.length; i++) {
+      console.log("la nota de la " + [i] + "º posición es " + notas[i]);
+    }
+
+    //=================CREAR UN NUEVO ARRAY CON LAS NOTAS APROBADAS================
+    // OPCION 1: recorrer el array y almacenar las notas aprobadas en un nuevo array.
+    let notasAprobadas = [];
+
+    for (let i = 0; i < notas.length; i++) {
+      if (notas[i] >= 5) {
+        notasAprobadas.push(notas[i]);
+      }
+    }
+    //console.log(notasAprobadas);
+
+    // OPCION 2: ordenar el array de menor a mayor y almacenarlo en una nueva array sin modificar la original.
+    let notasOrden = notas.slice().sort(function (a, b) {
+      return a - b;
+    });
+
+    //encontrar el indice del primer elemento con valor = o > a 5.
+    let primerAprobado = notasOrden.findIndex(function (valor) {
+      return valor >= 5;
+    });
+    
+    //almacenar en una nueva array la parte de la array con los numeros aprobados.
+    let notasAprobadas2 = notasOrden.slice(primerAprobado);
+    //console.log(notasAprobadas2);
+
+    //============CALCULAR LA MEDIA DE LAS NOTAS=========================
+    //declarar una variable que acumule la suma de elementos.
+    let suma = notas[0];
+    //recorrer el array
+    for (let j = 0; j < notas.length; j++) {
+      //actualizar la variable
+      suma = suma + notas[j];
+    }
+    //variable almacene la nota media
+    let media = suma / notas.length;
+
+    //console.info(suma);
+    //console.info(media);
+
+    //==============LA NOTA MÁS ALTA ==============
+    //OPCION 1: declarar una variable inicializada con el primer valor como maximo
+    let max = notas[0];
+
+    //recorrer el array
+    for (let i = 0; i < notas.length; i++) {
+      //comparar valor de cada elemento con la variable max
+      if (notas[i] > max) {
+        //actualizar variable
+        max = notas[i];
+      }
+    }
+    //console.info(max);
+
+    // OPCION 2: tomar el array ordenado de menor a mayor.
+    //ultimo elemento será el mayor.
+    let mayor = notasOrden[notasOrden.length - 1];
+    //console.info(mayor);
+
+    //==============LA NOTA MÁS BAJA============
+    //OPCION 1: declarar una variable inicializada con el primer valor como maximo
+    let min = notas[0];
+
+    //recorrer el array
+    for (let i = 0; i < notas.length; i++) {
+      //comparar valor de cada elemento con la variable max
+      if (notas[i] < min) {
+        //actualizar variable
+        min = notas[i];
+      }
+    }
+    //console.info(min);
+
+    //OPCION 2: tomar el array ordenado de menor a mayor.
+    //el primer elemento de la array ordenada sera el menor.
+    let menor = notasOrden[0];
+    //console.info(menor);
+  </script>
+</html>

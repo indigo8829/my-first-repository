@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<!--Recorriendo un array con posiciones vacias, comparación entre recorrer con un for in y un bucle for.
+NOTA: con el bucle for in no se acceden a elementos vacios o indefinidos. -->
+<script>
+    //declarar un array con posiciones vacias.
+    let array = [10, , 30, , 50];
+
+    //imprimir el array en el documento
+    document.write("Recorriendo el array con un for clásico <br>");
+    
+    //recorrer el array con un bucle for
+    for (let f = 0; f < array.length; f++) {
+        //imprimir elemento por elemento
+        document.write(array[f] + " - ");
+    }
+
+    document.write('<br>');
+    
+    //imprimir el array en el documento
+    document.write("Recorriendo el array con un for in <br>");
+    
+    //recorrer el array con un bucle for in
+    for (let indice in array) {
+        //imprimir elemento por elemento
+        document.write(array[indice] + " - ");
+    }
+</script>
+</html>

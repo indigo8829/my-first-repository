@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <!--Recorre una array con un ciclo for y también con un ciclo for in-->
+  <script>
+    //declara un array e inicializala
+    let num = [10, 20, 30, 40, 50];
+    
+    //recorre la array con un bucle for
+    for (let f = 0; f < num.length; f++) {
+        //imprime en el documento cada elemento
+        document.write(num[f] + " - ");
+    }
+
+    document.write("<br>");
+
+    //recorre la array con un bucle for in
+    for (let indice in num) {
+            //imprime en el doc el indice del elemento
+            document.write("indice: " + indice);
+            //imprime en el doc el valor del elemento
+            document.write(" valor= " + num [indice] + "<br>");
+        }
+
+  </script>
+</html>

@@ -1,0 +1,15 @@
+/*centrar los botones y poner distancias entre ellos*/
+.botones-control {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+/*ajustar el tamaño de los botones y su contenido*/
+button {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+}
+
