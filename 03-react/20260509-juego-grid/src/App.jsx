@@ -32,7 +32,7 @@ function App() {
     ColSelect>0 ? setColSelect(ColSelect-1) : alert("estas en el límite")
   }
 
-  function clikBotonAbj () {
+  function clickBotonAbj () {
     FilaSelect<9 ? setFilaSelect(FilaSelect+1) : alert("estas en el límite")
   }
 
@@ -52,8 +52,15 @@ function App() {
     //2. Condicion: la clase de la celda cambia según cambie el estado seleccionada/no selecionada.
     //Nota: cuando estado de la celda cambie renderiza,recorre map, compara...
     //3. Pasar los props al componente Control (botones)para la comunicacion padre-hijo.
+    //4. Capturamos evento de teclado en la grid. Cuando se pulse la tecla "nombrada", activa el evento, ejecuta la funcion.
+    //Nota: tabIndex, para convertir un div en un elemento capaz de escuchar el teclado.
     <>
-    <div className="contenedor">
+    <div className="contenedor" tabIndex={0} onKeyDown={(e)=> {
+      if (e.key === "ArrowLeft") {clickBotonIzq()}
+      if (e.key === "ArrowRight") {clickBotonDer()}
+      if (e.key === "ArrowUp") {clickBotonArr()}
+      if (e.key === "ArrowDown") {clickBotonAbj()}
+    }}>
       {gridArr.map ((objCelda, i) => {
         
         //Declaro 2 variables que iteren sobre fila/columna completas 
@@ -74,7 +81,7 @@ function App() {
       })}
     </div>
     <Control clickBotonIzqCallback={clickBotonIzq} clickBotonDerCallback={clickBotonDer} 
-    clickBotonAbjCallback={clikBotonAbj} clickBotonArrCallback={clickBotonArr}/>
+    clickBotonAbjCallback={clickBotonAbj} clickBotonArrCallback={clickBotonArr}/>
     </>
   )
 }
