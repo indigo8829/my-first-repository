@@ -39,7 +39,14 @@ function App() {
   function clickBotonArr () {
     FilaSelect>0 ? setFilaSelect(FilaSelect-1) : alert("estas en el límite")
   }
-
+  
+  //============== CLICAR CON EL RATÓN SOBRE UNA CELDA Y SUSTITUIR LA CELDA SELECCIONADA ========
+  function clickCelda (fila, col) {
+    //1. Actualizar las variables con las coordenadas y renderizar la celda clicada. 
+    setFilaSelect(fila)
+    setColSelect(col)
+  }
+ 
   return (
     //1. Recorrer el array de los elementos y devolver por cada elemento un div (celda).
     //2. Condicion: la clase de la celda cambia según cambie el estado seleccionada/no selecionada.
@@ -60,6 +67,8 @@ function App() {
         className={ fila === FilaSelect && col === ColSelect ? "celda-elegida" : "celda"}
         //className={i=== CeldaSelect ? "celda-elegida" : "celda"}
         key={i}
+        //espera, cuando se haga click en la celda, activa el evento , ejecuta la funcion y pasale las coordenadas X,Y. 
+        onClick={(e) => {clickCelda(fila, col)}}
         >
         </div>
       })}
