@@ -1,0 +1,20 @@
+.menu-principal {
+    display: flex; 
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    background-color: rgb(238, 207, 160);
+    border-radius: 5px;
+    border: 1px solid rgb(255, 202, 9);
+}
+
+.menu-principal Link {
+    border:1px solid rgb(246, 228, 72);
+    background-color: rgb(83, 152, 108);
+    
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+}
