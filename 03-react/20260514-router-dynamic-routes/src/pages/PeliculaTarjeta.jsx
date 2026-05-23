@@ -9,8 +9,8 @@ import "./PeliculaTarjeta.css";
 //recorrer array peliculas y mirar que id coincide con la id de la URL.
 
 function PeliculaTarjeta () {
-    const antesImgSrc = '/antesdeti.jpg'
-    const harryImgSrc = '/harrypotter.jpg'
+    //const antesImgSrc = '/antesdeti.jpg'
+    //const harryImgSrc = '/harrypotter.jpg'
 
     const {idPeli} = useParams (); 
     //idPeli es un string comprobamos con typeof
