@@ -8,10 +8,8 @@ function App() {
 
   return (
     <>
-    <Timer/>
-    <Stop/>
     <Counter/>
-    <ClearTimer/>
+
     </>
   )
 }
