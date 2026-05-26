@@ -31,6 +31,14 @@ const peliculas = [
         genero:"Romance",
         foto: "/el-principe-de-las-mareas.jpg",
     },
+    {
+        id: 5, 
+        titulo: "La montaña entre nosotros",
+        info: "Adaptación de la novela de Charles Martin. La historia sigue a dos personas distintas, Ashley es una escritora que debe coger un vuelo desde Salt Lake City al Este para poder llegar a su boda. Ben es un médico que vuelve de una conferencia médica. Cuando su vuelo es cancelado por problemas con el anticongelante, los pasajeros deciden coger un vuelo charter. Cuando el piloto sufre un ataque al corazón se estrellan en una desolada montaña llena de nieve. Él se rompe una costilla y ella, una pierna. Afortunadamente además de doctor, es un ávido escalador. Mientras intentan descender por la montaña ella empieza a plantearse que quizá se iba a casar con el hombre equivocado.",
+        anyo: "2017",
+        genero:"Aventuras",
+        foto: "/la-montaña-entre-nosotros.jpg",
+    },
 ]
 
 export default peliculas

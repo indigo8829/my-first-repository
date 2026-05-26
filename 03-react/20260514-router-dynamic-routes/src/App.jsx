@@ -11,6 +11,7 @@ function App() {
         <Link to='2'>Erin Brockovick</Link>|
         <Link to='3'>El indomable Will Hunting</Link>|
         <Link to='4'>El principe de las mareas</Link>|
+        <Link to='5'>La montaña entre nosoros</Link>
       </nav>
       <Outlet/>
     </>

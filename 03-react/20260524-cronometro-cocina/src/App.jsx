@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import './App.css'
 
-
 function App() {
   //declarar variable contadora / renderizadora segundos.
   const [segundos, setSegundos] = useState(0);
@@ -22,7 +21,6 @@ function App() {
     if (cronoOn === true) {
       miCrono = setInterval (miCronometro, 1000);
     }
-    
     //limpiar memoria
     return () => clearInterval(miCrono)
 
