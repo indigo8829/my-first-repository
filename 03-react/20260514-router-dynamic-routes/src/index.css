@@ -1,20 +1,20 @@
-.menu-principal {
-    display: flex; 
-    flex-direction: row;
-    gap: 30px;
-    justify-content: center;
-    background-color: rgb(238, 207, 160);
-    border-radius: 5px;
-    border: 1px solid rgb(255, 202, 9);
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.menu-principal Link {
-    border:1px solid rgb(246, 228, 72);
-    background-color: rgb(83, 152, 108);
-    
+body {
+   background-color: #f6f3d9; 
+   font-family: Arial, Helvetica, sans-serif;
+   color: #333;
+   padding: 20px;
 }
 
 h1 {
     text-align: center;
-    font-size: 30px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color:#7e540b;
+    text-decoration:underline;
 }

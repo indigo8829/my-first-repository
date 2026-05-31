@@ -1,0 +1,24 @@
+.menu-principal {
+    width: 80% auto;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #bca275;
+    border-radius: 5px;
+    border: 1px solid #fff188;
+}
+
+.menu-principal a {
+    background-color: #aa7834e9;
+    color: #ffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.menu-principal a:hover {
+    background-color: #7e540b;
+}

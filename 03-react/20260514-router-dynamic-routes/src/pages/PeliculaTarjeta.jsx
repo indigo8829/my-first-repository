@@ -26,10 +26,10 @@ function PeliculaTarjeta () {
                 <div className="fotoPeli">
                     <img src={peliSelecc.foto} alt="" />
                 </div>
-                <div className="tarjetaTexto">
+                <div className="tarjeta-Texto">
                     <h1>{peliSelecc.titulo}</h1>
-                    <h2>{peliSelecc.anyo}</h2>
-                    <h2>{peliSelecc.genero}</h2>
+                    <h2>Año: {peliSelecc.anyo}</h2>
+                    <h2>Género: {peliSelecc.genero}</h2>
                     <p>{peliSelecc.info}</p>
                 </div>
             </div>
